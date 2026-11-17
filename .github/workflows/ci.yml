@@ -22,10 +22,13 @@ jobs:
           extensions: mbstring, pdo, pdo_mysql, curl, openssl
           coverage: none
 
+      - name: Setup Environment File
+        run: cp .env.example .env
+
       - name: Verify PHP Syntax (Lint All Files)
         run: |
           echo "Starting PHP Linting across project..."
-          find app/ config/ public/ -name "*.php" -print0 | xargs -0 -n1 php -l
+          find app config public -type f -name "*.php" -exec php -l {} +
 
       - name: Execute Automated Unit Tests
         run: |

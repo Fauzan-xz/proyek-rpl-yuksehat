@@ -1,6 +1,6 @@
 # YukSehat: Sistem Informasi Poskestren Berbasis Web dengan Dual-Engine AI & WhatsApp Gateway
 
-[![YukSehat CI/CD Pipeline](https://github.com/[USERNAME]/YukSehat/actions/workflows/ci.yml/badge.svg)](https://github.com/[USERNAME]/YukSehat/actions/workflows/ci.yml)
+[![YukSehat CI/CD Pipeline](https://github.com/fauzan-xz/proyek-rpl-yuksehat/actions/workflows/ci.yml/badge.svg)](https://github.com/fauzan-xz/proyek-rpl-yuksehat/actions/workflows/ci.yml)
 ![PHP Version](https://img.shields.io/badge/PHP-8.2%2B-blue.svg)
 ![MySQL](https://img.shields.io/badge/MySQL-8.0%2B-orange.svg)
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3-purple.svg)
@@ -18,7 +18,7 @@ Dokumen dan repositori ini disusun untuk memenuhi **Tugas Proyek Akhir Mandiri R
 - **Dosen Pengampu:** Yudhistira Arie Wijaya, M.Kom., CDS.
 - **Tema Topik Kelompok:** *Smart Healthcare & Public Service AI*
 - **Nama Mahasiswa:** Muhamad Fauzan
-- **NIM:** [41257209]
+- **NIM:** 41257209
 
 ---
 
@@ -47,22 +47,21 @@ Dokumen dan repositori ini disusun untuk memenuhi **Tugas Proyek Akhir Mandiri R
 ## 🎥 Tautan Video Presentasi & Live Demo Sistem
 Berikut adalah tautan rekaman presentasi video sesuai ketentuan Bab III & Rubrik 4.2:
 
-- 📹 **Video Progres 1 (PRD & Konsep Aplikasi - 3 s.d. 5 Menit):**  
-  [Klik di Sini untuk Menonton Video Progres 1 (YouTube/Google Drive)](https://youtu.be/contoh-link-progres-1)
-- 📹 **Video Progres 2 (Pemodelan UML & UI/UX - 5 s.d. 7 Menit):**  
-  [Klik di Sini untuk Menonton Video Progres 2 (YouTube/Google Drive)](https://youtu.be/contoh-link-progres-2)
-- 📹 **Video Final (Live Demo Aplikasi Web & Sistem Utuh - 8 s.d. 12 Menit):**  
-  [Klik di Sini untuk Menonton Video Final Live Demo (YouTube/Google Drive)](https://youtu.be/contoh-link-video-final)
+- 📹 **Video Presentasi & Live Demo Sistem Utuh:**  
+  [Klik di Sini untuk Menonton Video Presentasi di YouTube](https://youtu.be/zing9aLh28I?si=7ZWlRvO_Iles97tS)
 
 ---
 
 ## 📁 Struktur Dokumen Tugas di Repositori (`/tugas`)
 Seluruh dokumen pelaporan akademik disusun secara rapi pada folder [`/tugas`](file:///c:/xampp/htdocs/YukSehat/tugas/):
-- [`01_PRD_SRS_YukSehat.md`](file:///c:/xampp/htdocs/YukSehat/tugas/01_PRD_SRS_YukSehat.md): Dokumen Kebutuhan Perangkat Lunak (IEEE 830 / ISO 29148, User Stories & Acceptance Criteria).
+- [`Dokumen_Lengkap.md`](file:///c:/xampp/htdocs/YukSehat/tugas/Dokumen_Lengkap.md): **Berkas Dokumen Lengkap Gabungan (PRD, Dokumen SDD, dan Laporan Pengujian / Akhir)** sesuai instrumen pengumpulan.
 - [`02_SDD_UML_Arsitektur_YukSehat.md`](file:///c:/xampp/htdocs/YukSehat/tugas/02_SDD_UML_Arsitektur_YukSehat.md): Dokumen Desain Arsitektur (4 Diagram UML Inti, ERD 8 Tabel, dan Panduan UI/UX).
 - [`03_Konstruksi_Testing_DevOps_CI_CD.md`](file:///c:/xampp/htdocs/YukSehat/tugas/03_Konstruksi_Testing_DevOps_CI_CD.md): Laporan Clean Code, Integrasi Dual AI, Laporan Unit Test 24/24 PASS, dan CI/CD.
 - [`04_Laporan_Akhir_Terintegrasi.md`](file:///c:/xampp/htdocs/YukSehat/tugas/04_Laporan_Akhir_Terintegrasi.md): Berkas Laporan Akhir Lengkap (Cover Resmi STMIK IKMI, Bab I s.d. V, Daftar Pustaka).
-- [`05_Panduan_Naskah_Video_Presentasi.md`](file:///c:/xampp/htdocs/YukSehat/tugas/05_Panduan_Naskah_Video_Presentasi.md): Naskah percakapan dan alur menit demi menit untuk ketiga video presentasi.
+
+Dokumen PRD & SRS spesifikasi lengkap juga tersedia pada folder [`/documentation/PRD-SRS`](file:///c:/xampp/htdocs/YukSehat/documentation/PRD-SRS/):
+- [`PRD_YukSehat.md`](file:///c:/xampp/htdocs/YukSehat/documentation/PRD-SRS/PRD_YukSehat.md): Product Requirement Document detail.
+- [`SRS_YukSehat.md`](file:///c:/xampp/htdocs/YukSehat/documentation/PRD-SRS/SRS_YukSehat.md): Software Requirements Specification (IEEE 830).
 
 ---
 
@@ -78,8 +77,8 @@ Seluruh dokumen pelaporan akademik disusun secara rapi pada folder [`/tugas`](fi
 Kloning repositori ke direktori `htdocs` XAMPP Anda:
 ```bash
 cd C:\xampp\htdocs
-git clone https://github.com/[USERNAME]/YukSehat.git
-cd YukSehat
+git clone https://github.com/fauzan-xz/proyek-rpl-yuksehat.git
+cd proyek-rpl-yuksehat
 ```
 
 ### 3. Setup Basis Data MySQL
