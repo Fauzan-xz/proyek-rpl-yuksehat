@@ -1,0 +1,45 @@
+Options -Indexes
+RewriteEngine On
+
+# ============================================================
+# SECURITY HEADERS (server-level hardening)
+# ============================================================
+
+# Prevent clickjacking
+Header always set X-Frame-Options "SAMEORIGIN"
+
+# Prevent MIME-type sniffing (anti-XSS)
+Header always set X-Content-Type-Options "nosniff"
+
+# Referrer policy to prevent leaking URLs
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+# Basic XSS protection header (for older browsers)
+Header always set X-XSS-Protection "1; mode=block"
+
+# ============================================================
+# BLOCK SENSITIVE FILES & TEST SCRIPTS
+# ============================================================
+<FilesMatch "(^\.env|\.gitignore|composer\.(json|lock)|package(-lock)?\.json|\.sql|\.log|cookie_.*\.txt)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+<FilesMatch "^(test_.*|setup_.*|check_.*|run_.*)\.php$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# ============================================================
+# BLOCK DIRECT ACCESS TO INTERNAL PROJECT DIRECTORIES (L-DEP-02)
+# ============================================================
+# Deny direct HTTP access to internal project directories BEFORE rewriting to public/
+<IfModule mod_rewrite.c>
+    RewriteRule ^(\.git|app|bin|config|database|storage|routes|scratch|docs|chatbot-server)(/.*)?$ - [F,L,NC]
+</IfModule>
+
+# ============================================================
+# PUBLIC FRONT-CONTROLLER REWRITE
+# ============================================================
+# Forward all remaining legitimate requests to public/ front controller
+RewriteRule ^(.*)$ public/$1 [L]

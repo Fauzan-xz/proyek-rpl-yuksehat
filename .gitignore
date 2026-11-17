@@ -1,0 +1,13 @@
+/node_modules
+/vendor
+/.env
+/.env.*
+!/.env.example
+/chatbot-server/.env
+*.sql
+*.log
+/storage/*.log
+cookie_*.txt
+scratch/
+.DS_Store
+

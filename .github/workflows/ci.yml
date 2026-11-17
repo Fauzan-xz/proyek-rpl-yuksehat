@@ -1,0 +1,32 @@
+name: YukSehat CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build-and-test:
+    name: PHP Lint & Automated Unit Testing
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup PHP Environment
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          extensions: mbstring, pdo, pdo_mysql, curl, openssl
+          coverage: none
+
+      - name: Verify PHP Syntax (Lint All Files)
+        run: |
+          echo "Starting PHP Linting across project..."
+          find app/ config/ public/ -name "*.php" -print0 | xargs -0 -n1 php -l
+
+      - name: Execute Automated Unit Tests
+        run: |
+          php tests/run_tests.php

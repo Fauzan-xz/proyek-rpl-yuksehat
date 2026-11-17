@@ -1,0 +1,17 @@
+{
+  "name": "yuksehat-chatbot-server",
+  "version": "1.0.0",
+  "description": "Node.js Gemini AI Chatbot Server untuk YukSehat Pondok Pesantren",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "gemini-ai",
+    "chatbot",
+    "yuksehat",
+    "poskestren"
+  ],
+  "author": "YukSehat Team",
+  "license": "ISC"
+}
